@@ -1,0 +1,64 @@
+import random    
+import time
+print("ROLLING DICE")
+time.sleep(5)
+n=random.randint(1,10)
+
+name=input("enter your name")
+mode=int(input("""select your mode
+                        1.easy
+                        2.medium
+                        3.difficult"""))
+print("enter a num between 1 and 10")
+
+
+if(mode==1):
+    
+    for i in range(1,3):
+        num=int(input("enter your guess"))
+        if(num!=n):
+            if(num>n):
+                print("your guess is high")
+            elif(num<n):
+                print("your guess is low")
+            if((3-i)<1):
+                print("no chance ")
+            print("you have",(3-i)," chances rem")
+        
+        else:
+            
+            print("your guess is corect",n)
+            print("congrats")
+            break
+    
+
+elif(mode==2):
+    for i in range(1,6):
+        num=int(input("enter your guess"))
+        if(num!=n):
+            if(num>n):
+                print("your guess is high")
+            elif(num<n):
+                print("your guess is low")
+            print("you have ",(6-i)," chances remaining")
+            
+
+        if(num==n):
+            print("congrats")
+            print("your guess is correct",n)
+            break
+
+elif(mode==3):
+    for i in range(1,8):
+        num=int(input("enter your guess"))
+        
+        if(num!=n):
+            if(num>n):
+                print("your guess is high")
+            elif(num<n):
+                print("your guess is low")
+            print("you have ",(8-i),"chances remaining")
+        if(num==n):
+            print("congrats")
+            print("your guess is correct",n)
+            break
